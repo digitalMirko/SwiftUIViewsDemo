@@ -12,7 +12,7 @@ below. It was always there but setup so when the app first starts it is hidden. 
 orange with a series of items present only within the view.
 
 On the top of the view is a button labeled 'Hide this View' which when clicked will hide this view and all of its contents.
-Then right below is a textview, then a horizontal slider then a switch followed by a TextView with some text. 
+Then right below is a Text Field, then a Horizontal Slider then a Switch followed by a Text View with some text. 
 
 In this demo we use the 'isHidden' option within swift to display (false) or hide (true) options
 
