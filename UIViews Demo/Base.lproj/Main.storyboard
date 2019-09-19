@@ -25,6 +25,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                 <state key="normal" title="Show the View"/>
+                                <connections>
+                                    <action selector="showViewBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iFW-s8-kz8"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mIy-7x-Ncg">
                                 <rect key="frame" x="16" y="129" width="343" height="271"/>
@@ -35,6 +38,9 @@
                                         <state key="normal" title="Hide this View">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="hideViewBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rg8-wz-cJA"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HdN-Nw-ka8">
                                         <rect key="frame" x="8" y="56" width="327" height="30"/>
@@ -45,9 +51,6 @@
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="YeL-hg-pfX">
                                         <rect key="frame" x="8" y="109" width="329" height="31"/>
                                     </slider>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vj4-hx-P6N">
-                                        <rect key="frame" x="147" y="157" width="51" height="31"/>
-                                    </switch>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NM0-Mb-pyx">
                                         <rect key="frame" x="8" y="203" width="327" height="60"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -58,26 +61,27 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vj4-hx-P6N">
+                                        <rect key="frame" x="147" y="164" width="51" height="31"/>
+                                    </switch>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="NM0-Mb-pyx" secondAttribute="trailing" constant="8" id="6Wd-JC-6Oq"/>
                                     <constraint firstAttribute="trailing" secondItem="YeL-hg-pfX" secondAttribute="trailing" constant="8" id="ARC-sB-drj"/>
+                                    <constraint firstItem="NM0-Mb-pyx" firstAttribute="top" secondItem="vj4-hx-P6N" secondAttribute="bottom" constant="8" id="CL5-D4-lI6"/>
                                     <constraint firstItem="p7I-9c-s2k" firstAttribute="leading" secondItem="mIy-7x-Ncg" secondAttribute="leading" constant="8" id="DgS-gh-78g"/>
                                     <constraint firstItem="NM0-Mb-pyx" firstAttribute="leading" secondItem="mIy-7x-Ncg" secondAttribute="leading" constant="8" id="Eud-mB-zbx"/>
                                     <constraint firstAttribute="width" constant="343" id="IYp-fo-wrX"/>
                                     <constraint firstAttribute="trailing" secondItem="p7I-9c-s2k" secondAttribute="trailing" constant="8" id="IrW-kL-jf0"/>
                                     <constraint firstItem="p7I-9c-s2k" firstAttribute="top" secondItem="mIy-7x-Ncg" secondAttribute="top" constant="8" id="JeM-qr-Pia"/>
                                     <constraint firstAttribute="height" constant="271" id="Jro-dI-xHb"/>
-                                    <constraint firstItem="vj4-hx-P6N" firstAttribute="leading" secondItem="mIy-7x-Ncg" secondAttribute="leading" constant="147" id="Ksi-l5-X3F"/>
-                                    <constraint firstAttribute="trailing" secondItem="vj4-hx-P6N" secondAttribute="trailing" constant="147" id="M3b-VJ-Jox"/>
                                     <constraint firstItem="HdN-Nw-ka8" firstAttribute="top" secondItem="p7I-9c-s2k" secondAttribute="bottom" constant="8" id="ayI-Ge-Dda"/>
-                                    <constraint firstItem="NM0-Mb-pyx" firstAttribute="top" secondItem="vj4-hx-P6N" secondAttribute="bottom" constant="15" id="cLx-VC-ny5"/>
                                     <constraint firstItem="YeL-hg-pfX" firstAttribute="leading" secondItem="mIy-7x-Ncg" secondAttribute="leading" constant="10" id="dpH-dQ-WBK"/>
                                     <constraint firstAttribute="bottom" secondItem="NM0-Mb-pyx" secondAttribute="bottom" constant="8" id="eEa-bw-QJV"/>
                                     <constraint firstItem="YeL-hg-pfX" firstAttribute="top" secondItem="HdN-Nw-ka8" secondAttribute="bottom" constant="23" id="iDT-Dg-r0d"/>
                                     <constraint firstItem="HdN-Nw-ka8" firstAttribute="top" secondItem="p7I-9c-s2k" secondAttribute="bottom" constant="8" id="luJ-0f-uJv"/>
-                                    <constraint firstItem="vj4-hx-P6N" firstAttribute="centerX" secondItem="mIy-7x-Ncg" secondAttribute="centerX" id="pjd-1K-E8H"/>
+                                    <constraint firstItem="vj4-hx-P6N" firstAttribute="centerX" secondItem="mIy-7x-Ncg" secondAttribute="centerX" id="mv8-U4-4TR"/>
                                     <constraint firstItem="HdN-Nw-ka8" firstAttribute="leading" secondItem="mIy-7x-Ncg" secondAttribute="leading" constant="8" id="qz6-Bc-bif"/>
                                     <constraint firstAttribute="trailing" secondItem="HdN-Nw-ka8" secondAttribute="trailing" constant="8" id="zI1-5h-YsB"/>
                                 </constraints>
@@ -95,6 +99,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="theView" destination="mIy-7x-Ncg" id="Rhg-M8-xjS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
